@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <link rel="stylesheet" href="css/styles.css"/> -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cherry+Bomb+One&family=Dela+Gothic+One&family=Monoton&family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&family=Oxygen+Mono&family=Russo+One&family=Yeseva+One&display=swap" rel="stylesheet">
+        <title>Math Test</title>
+    </head>
+    <body>
+
+
+        <section class="ask">
+            <h1>Numbers of questions?</h1>
+            <div class="container">
+                <input type="number" name="number" class="chosenum" id="chosenum" min="0" step="1" value="0" oninput="this.value = 
+                !!this.value && Math.abs(this.value) >= 0 ? Math.abs(this.value) : null">
+            </div>
+            <a href="#main"><button onclick="createQuestion()" class="button"><span class="send">Send</span></button></a>
+        </section>
+        
+        <section class="main" id="main">
+            <div class="head">
+                <h1>Question</h1>
+            </div>
+
+            <div class="gradientMin"></div>
+
+            <p class="box">
+            <span class="que" id="question"></span>
+            </p>
+            <span id="showAns"></span>
+            <div class="submit">
+                <button onclick="checkAns()" id="send" class="button"><span class="send">Submit</span></button>
+            </div>
+        </section>
+
+        
+    </body>
+    <script src="js/sum.js"></script>
+</html>
